@@ -11,6 +11,6 @@ print("ColroOS " .. version) --Prints ColroOS
 shell.run("cd /Colro") --Sets working directory to Colro
 while true do
 write(">")
-local input = read("")
+local input = read()
 shell.run("/Colro/Programs/" .. input)
 end
