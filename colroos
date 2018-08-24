@@ -1,0 +1,16 @@
+--ColroOS by spongecattle
+--Created for Colro Studios
+os.pullEvent = os.pullEventRaw
+
+version = "1.0"
+
+term.clear() --Clears screen
+term.setCursorPos(0,0) --Set to start of screen
+print("") --Blank space
+print("ColroOS " .. version) --Prints ColroOS
+shell.run("cd /Colro") --Sets working directory to Colro
+while true do
+write(">")
+local input = read("")
+shell.run("/Colro/Programs/" .. input)
+end
