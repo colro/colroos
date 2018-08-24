@@ -1,0 +1,22 @@
+--Tango Bootloader by spongecattle
+--Created for Colro Studios
+
+term.clear() --Removes the CraftOS message
+term.setCursorPos(0,0) --Puts cursor at start of screen
+print("") --Blank line
+print("Tango Bootloader") --Prints Tango Bootloader
+
+print("Searching for ColroOS") --Tells user it is searching for ColroOS
+if fs.exists("/colroos") == true then --Searches for ColroOS
+  print("Booting ColroOS") --Tells user that it is booting
+  shell.run("/colroos") --Starts ColroOS
+end --End of ColroOS boot code  
+
+print("ColroOS not found") --Tells user that ColroOS is not found
+print("Enter file to boot from") --Asks user to enter file to boot from
+local input = read()
+if fs.exists(input) == true then --Checks if it is there
+  shell.run(input) --Boots from file
+end --End of Input boot code
+print("Not found. Rebooting.") --Tells user that it is not found
+shell.run("reboot") --Reboots  
