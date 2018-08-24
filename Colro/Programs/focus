@@ -8,16 +8,12 @@ package = args[2]
 if action == "install" then
 	if package == "cd" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "dir" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "shell" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "del" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "focus" then
 		print("Error: The selected package is Focus.")
 		print("Note: If you need to update Focus, use the package fpu.")
@@ -37,16 +33,12 @@ end
 if action == "remove" then
 	if package == "cd" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "dir" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "shell" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "del" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "focus" then
 		print("Error: The selected package is Focus.")
 		print("Note: If you need to update Focus, use the package fpu.")
@@ -66,16 +58,12 @@ end
 if action == "update" then
 	if package == "cd" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "dir" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "shell" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "del" then
 		print("Error: The selected package is a system file")
-	end
 	if package == "focus" then
 		print("Error: The selected package is Focus.")
 		print("Note: If you need to update Focus, use the package fpu.")
