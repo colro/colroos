@@ -8,13 +8,17 @@ package = args[2]
 if action == "install" then
 	if package == "cd" then
 		print("Error: The selected package is a system file")
-	elseif package == "dir" then
+	end
+	if package == "dir" then
 		print("Error: The selected package is a system file")
-	elseif package == "shell" then
+	end
+	if package == "shell" then
 		print("Error: The selected package is a system file")
-	elseif package == "del" then
+	end
+	if package == "del" then
 		print("Error: The selected package is a system file")
-	elseif package == "focus" then
+	end
+	if package == "focus" then
 		print("Error: The selected package is Focus.")
 		print("Note: If you need to update Focus, use the package fpu.")
 	else
@@ -27,19 +31,23 @@ if action == "install" then
 		file.write(handle) --writes all the stuff in handle to the file 'startup'.
 		file.close() --remember to close download!
 		print(package .. " Downloaded")	
-		end
+	end
 end
 
 if action == "remove" then
 	if package == "cd" then
 		print("Error: The selected package is a system file")
-	elseif package == "dir" then
+	end
+	if package == "dir" then
 		print("Error: The selected package is a system file")
-	elseif package == "shell" then
+	end
+	if package == "shell" then
 		print("Error: The selected package is a system file")
-	elseif package == "del" then
+	end
+	if package == "del" then
 		print("Error: The selected package is a system file")
-	elseif package == "focus" then
+	end
+	if package == "focus" then
 		print("Error: The selected package is Focus.")
 		print("Note: If you need to update Focus, use the package fpu.")
 	else
@@ -58,13 +66,17 @@ end
 if action == "update" then
 	if package == "cd" then
 		print("Error: The selected package is a system file")
-	elseif package == "dir" then
+	end
+	if package == "dir" then
 		print("Error: The selected package is a system file")
-	elseif package == "shell" then
+	end
+	if package == "shell" then
 		print("Error: The selected package is a system file")
-	elseif package == "del" then
+	end
+	if package == "del" then
 		print("Error: The selected package is a system file")
-	elseif package == "focus" then
+	end
+	if package == "focus" then
 		print("Error: The selected package is Focus.")
 		print("Note: If you need to update Focus, use the package fpu.")
 	else
