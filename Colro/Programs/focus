@@ -8,23 +8,28 @@ package = args[2]
 if action == "install" then
 	if package == "cd" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "dir" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "shell" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "del" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "focus" then
 		print("Error: The selected package is Focus.")
 		print("Note: If you need to update Focus, use the package fpu.")
+		break
 	else
 		shell.run("cd /Colro/Programs")
 		print("Downloading " .. package)
-		local download = http.get("https://raw.github.com/colro/focus-repo/" .. package) --This will make 'download' hold the contents of the file.
+		local download = http.get("https://raw.githubusercontent.com/colro/focus-repo/" .. package) --This will make 'download' hold the contents of the file.
 		local download = download.readAll() --Reads everything in download
 		download.close() --remember to close download!
 		local file = fs.open(package,"w") --opens the file with the permissions to write.
@@ -37,19 +42,24 @@ end
 if action == "remove" then
 	if package == "cd" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "dir" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "shell" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "del" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "focus" then
 		print("Error: The selected package is Focus.")
 		print("Note: If you need to update Focus, use the package fpu.")
+		break
 	else
 		shell.run("cd /Colro/Programs")
 		print("Removing " .. package)
@@ -66,19 +76,24 @@ end
 if action == "update" then
 	if package == "cd" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "dir" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "shell" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "del" then
 		print("Error: The selected package is a system file")
+		break
 	end
 	if package == "focus" then
 		print("Error: The selected package is Focus.")
 		print("Note: If you need to update Focus, use the package fpu.")
+		break
 	else
 		shell.run("cd /Colro/Programs")
 		print("Updating " .. package)
@@ -88,7 +103,7 @@ if action == "update" then
 		if fs.exists(package) == true then
 			fs.delete(package)
 		end
-		local download = http.get("https://raw.github.com/colro/focus-repo/" .. package) --This will make 'download' hold the contents of the file.
+		local download = http.get("https://raw.githubusercontent.com/colro/focus-repo/" .. package) --This will make 'download' hold the contents of the file.
 		local download = download.readAll() --Reads everything in download
 		download.close() --remember to close download!
 		local file = fs.open(package,"w") --opens the file with the permissions to write.
