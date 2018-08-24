@@ -8,12 +8,7 @@ package = args[2]
 if action == "install" then
 		shell.run("cd /Colro/Programs")
 		print("Downloading " .. package)
-		local download = http.get("https://raw.githubusercontent.com/colro/focus-repo/" .. package) --This will make 'download' hold the contents of the file.
-		local download = download.readAll() --Reads everything in download
-		download.close() --remember to close download!
-		local file = fs.open(package,"w") --opens the file with the permissions to write.
-		file.write(handle) --writes all the stuff in handle to the file 'startup'.
-		file.close() --remember to close download!
+		shell.run("wget https://raw.githubusercontent.com/colro/focus-repo/" .. package .. " /Colro/Programs/" .. package) --This will make 'download' hold the contents of the file.
 		print(package .. " Downloaded")	
 end
 
@@ -38,13 +33,9 @@ if action == "update" then
 		if fs.exists(package) == true then
 			fs.delete(package)
 		end
-		local download = http.get("https://raw.githubusercontent.com/colro/focus-repo/" .. package) --This will make 'download' hold the contents of the file.
-		local download = download.readAll() --Reads everything in download
-		download.close() --remember to close download!
-		local file = fs.open(package,"w") --opens the file with the permissions to write.
-		file.write(handle) --writes all the stuff in handle to the file 'startup'.
-		file.close() --remember to close download!
-		print(package .. " Updated")
+		print("Downloading " .. package)
+		shell.run("wget https://raw.githubusercontent.com/colro/focus-repo/" .. package .. " /Colro/Programs/" .. package) --This will make 'download' hold the contents of the file.
+		print(package .. " Downloaded")	
 end
 
 if action == "help" then
