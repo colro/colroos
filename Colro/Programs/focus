@@ -15,7 +15,6 @@ if action == "install" then
 		file.write(handle) --writes all the stuff in handle to the file 'startup'.
 		file.close() --remember to close download!
 		print(package .. " Downloaded")	
-	end
 end
 
 if action == "remove" then
@@ -28,7 +27,6 @@ if action == "remove" then
 			fs.delete(package)
 			print(package .. " Removed")	
 		end
-	end
 end
 
 if action == "update" then
@@ -46,8 +44,7 @@ if action == "update" then
 		local file = fs.open(package,"w") --opens the file with the permissions to write.
 		file.write(handle) --writes all the stuff in handle to the file 'startup'.
 		file.close() --remember to close download!
-		print(package .. " Updated")	
-	end
+		print(package .. " Updated")
 end
 
 if action == "help" then
