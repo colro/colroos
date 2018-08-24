@@ -6,7 +6,13 @@ action = args[1]
 package = args[2]
 
 if action == "install" then
-	if package == "cd" or "dir" or "shell" or "del" then
+	if package == "cd" then
+		print("Error: The selected package is a system file")
+	elseif package == "dir" then
+		print("Error: The selected package is a system file")
+	elseif package == "shell" then
+		print("Error: The selected package is a system file")
+	elseif package == "del" then
 		print("Error: The selected package is a system file")
 	elseif package == "focus" then
 		print("Error: The selected package is Focus.")
@@ -25,7 +31,13 @@ if action == "install" then
 end
 
 if action == "remove" then
-	if package == "cd" or "dir" or "shell" or "del" then
+	if package == "cd" then
+		print("Error: The selected package is a system file")
+	elseif package == "dir" then
+		print("Error: The selected package is a system file")
+	elseif package == "shell" then
+		print("Error: The selected package is a system file")
+	elseif package == "del" then
 		print("Error: The selected package is a system file")
 	elseif package == "focus" then
 		print("Error: The selected package is Focus.")
@@ -44,7 +56,13 @@ if action == "remove" then
 end
 
 if action == "update" then
-	if package == "cd" or "dir" or "shell" or "del" then
+	if package == "cd" then
+		print("Error: The selected package is a system file")
+	elseif package == "dir" then
+		print("Error: The selected package is a system file")
+	elseif package == "shell" then
+		print("Error: The selected package is a system file")
+	elseif package == "del" then
 		print("Error: The selected package is a system file")
 	elseif package == "focus" then
 		print("Error: The selected package is Focus.")
