@@ -1,1 +1,2 @@
+term.clear()
 shell.run("shell")
