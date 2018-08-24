@@ -1,0 +1,4 @@
+local args = {...}
+file = args[1]
+
+shell.run("delete " .. file)

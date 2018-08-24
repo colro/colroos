@@ -1,2 +1,0 @@
-# colroos
-ColroOS for ComputerCraft

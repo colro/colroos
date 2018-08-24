@@ -1,0 +1,78 @@
+--Focus by spongecattle
+--For ColroOS
+
+local args = {...}
+action = args[1]
+package = args[2]
+
+if action == "install" then
+	if package == "cd" or "dir" or "shell" or "del" then
+		print("Error: The selected package is a system file")
+	elseif package == "focus" then
+		print("Error: The selected package is Focus.")
+		print("Note: If you need to update Focus, use the package fpu.")
+	else
+		shell.run("cd /Colro/Programs")
+		print("Downloading " .. package)
+		local download = http.get("https://raw.github.com/colro/focus-repo/" .. package) --This will make 'download' hold the contents of the file.
+		local handle = download.readAll() --Reads everything in download
+		download.close() --remember to close download!
+		local file = fs.open(package,"w") --opens the file with the permissions to write.
+		file.write(handle) --writes all the stuff in handle to the file 'startup'.
+		file.close() --remember to close download!
+		print(package .. " Downloaded")	
+		end
+end
+
+if action == "remove" then
+	if package == "cd" or "dir" or "shell" or "del" then
+		print("Error: The selected package is a system file")
+	elseif package == "focus" then
+		print("Error: The selected package is Focus.")
+		print("Note: If you need to update Focus, use the package fpu.")
+	else
+		shell.run("cd /Colro/Programs")
+		print("Removing " .. package)
+		if fs.exists(package) == false then
+			print("Error: The selected package does not exist")
+		end
+		if fs.exists(package) == true then
+			fs.delete(package)
+			print(package .. " Removed")	
+		end
+	end
+end
+
+if action == "update" then
+	if package == "cd" or "dir" or "shell" or "del" then
+		print("Error: The selected package is a system file")
+	elseif package == "focus" then
+		print("Error: The selected package is Focus.")
+		print("Note: If you need to update Focus, use the package fpu.")
+	else
+		shell.run("cd /Colro/Programs")
+		print("Updating " .. package)
+		if fs.exists(package) == false then
+			print("Error: The selected package does not exist")
+		end
+		if fs.exists(package) == true then
+			fs.delete(package)
+		end
+		local download = http.get("https://raw.github.com/colro/focus-repo/" .. package) --This will make 'download' hold the contents of the file.
+		local handle = download.readAll() --Reads everything in download
+		download.close() --remember to close download!
+		local file = fs.open(package,"w") --opens the file with the permissions to write.
+		file.write(handle) --writes all the stuff in handle to the file 'startup'.
+		file.close() --remember to close download!
+		print(package .. " Updated")	
+	end
+end
+
+if action == "help" then
+	print("Focus 1.0 by Colro Studios")
+	print("Program use: focus <action> <package>")
+	print("focus install - Installs the selected package")
+	print("focus remove - Removes the selected package")
+	print("focus update - Updates the selected package")
+	print("focus help - Shows this screen")
+end

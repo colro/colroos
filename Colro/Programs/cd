@@ -1,0 +1,4 @@
+local args = {...}
+directory = args[1]
+
+shell.run("cd " .. directory)
