@@ -8,7 +8,7 @@ package = args[2]
 if action == "install" then
 		shell.run("cd /Colro/Programs")
 		print("Downloading " .. package)
-		shell.run("wget https://raw.githubusercontent.com/colro/focus-repo/" .. package .. " /Colro/Programs/" .. package) --This will make 'download' hold the contents of the file.
+		shell.run("wget https://raw.githubusercontent.com/colro/focus-repo/master/" .. package .. " /Colro/Programs/" .. package) --This will make 'download' hold the contents of the file.
 		print(package .. " Downloaded")	
 end
 
@@ -34,7 +34,7 @@ if action == "update" then
 			fs.delete(package)
 		end
 		print("Downloading " .. package)
-		shell.run("wget https://raw.githubusercontent.com/colro/focus-repo/" .. package .. " /Colro/Programs/" .. package) --This will make 'download' hold the contents of the file.
+		shell.run("wget https://raw.githubusercontent.com/colro/focus-repo/master/" .. package .. " /Colro/Programs/" .. package) --This will make 'download' hold the contents of the file.
 		print(package .. " Downloaded")	
 end
 
