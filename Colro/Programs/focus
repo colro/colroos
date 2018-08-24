@@ -33,9 +33,8 @@ if action == "update" then
 		if fs.exists(package) == true then
 			fs.delete(package)
 		end
-		print("Downloading " .. package)
 		shell.run("wget https://raw.githubusercontent.com/colro/focus-repo/master/" .. package .. " /Colro/Programs/" .. package) --This will make 'download' hold the contents of the file.
-		print(package .. " Downloaded")	
+		print(package .. " Updated")	
 end
 
 if action == "help" then
