@@ -6,18 +6,6 @@ action = args[1]
 package = args[2]
 
 if action == "install" then
-	if package == "cd" then
-		print("Error: The selected package is a system file")
-	if package == "dir" then
-		print("Error: The selected package is a system file")
-	if package == "shell" then
-		print("Error: The selected package is a system file")
-	if package == "del" then
-		print("Error: The selected package is a system file")
-	if package == "focus" then
-		print("Error: The selected package is Focus.")
-		print("Note: If you need to update Focus, use the package fpu.")
-	else
 		shell.run("cd /Colro/Programs")
 		print("Downloading " .. package)
 		local download = http.get("https://raw.githubusercontent.com/colro/focus-repo/" .. package) --This will make 'download' hold the contents of the file.
@@ -31,18 +19,6 @@ if action == "install" then
 end
 
 if action == "remove" then
-	if package == "cd" then
-		print("Error: The selected package is a system file")
-	if package == "dir" then
-		print("Error: The selected package is a system file")
-	if package == "shell" then
-		print("Error: The selected package is a system file")
-	if package == "del" then
-		print("Error: The selected package is a system file")
-	if package == "focus" then
-		print("Error: The selected package is Focus.")
-		print("Note: If you need to update Focus, use the package fpu.")
-	else
 		shell.run("cd /Colro/Programs")
 		print("Removing " .. package)
 		if fs.exists(package) == false then
@@ -56,18 +32,6 @@ if action == "remove" then
 end
 
 if action == "update" then
-	if package == "cd" then
-		print("Error: The selected package is a system file")
-	if package == "dir" then
-		print("Error: The selected package is a system file")
-	if package == "shell" then
-		print("Error: The selected package is a system file")
-	if package == "del" then
-		print("Error: The selected package is a system file")
-	if package == "focus" then
-		print("Error: The selected package is Focus.")
-		print("Note: If you need to update Focus, use the package fpu.")
-	else
 		shell.run("cd /Colro/Programs")
 		print("Updating " .. package)
 		if fs.exists(package) == false then
