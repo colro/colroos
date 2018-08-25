@@ -10,7 +10,11 @@ print("") --Blank space
 print("ColroOS " .. version) --Prints ColroOS
 shell.run("cd /Colro") --Sets working directory to Colro
 while true do
-write("> ")
-local input = read()
-shell.run("/Colro/Programs/" .. input)
+  write("> ")
+  local input = read()
+  if fs.exists("/Colro/Programs/" .. input) then
+   shell.run("/Colro/Programs/" .. input)
+  else
+   shell.run(input)
+  end
 end
