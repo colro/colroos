@@ -2,7 +2,7 @@
 --Created for Colro Studios
 os.pullEvent = os.pullEventRaw
 
-version = "1.0"
+version = "1.0.1"
 
 term.clear() --Clears screen
 term.setCursorPos(0,0) --Set to start of screen
