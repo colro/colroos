@@ -2,7 +2,7 @@
 --Created for Colro Studios
 os.pullEvent = os.pullEventRaw
 
-version = "1.0.1"
+version = "1.0.2"
 
 term.clear() --Clears screen
 term.setCursorPos(0,0) --Set to start of screen
@@ -10,11 +10,15 @@ print("") --Blank space
 print("ColroOS " .. version) --Prints ColroOS
 shell.run("cd /Colro") --Sets working directory to Colro
 while true do
+  cDir = shell.dir() -- Fix included for the #4 bug
   write("> ")
   local input = read()
-  if fs.exists("/Colro/Programs/" .. input) then
+  shell.run("cd Programs")
+  if fs.exists(input) then
    shell.run("/Colro/Programs/" .. input)
+   shell.run("cd " .. cDir)
   else
    shell.run(input)
+   shell.run("cd " .. cDir)
   end
 end
